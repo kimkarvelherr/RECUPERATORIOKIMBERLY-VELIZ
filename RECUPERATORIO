@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="figure">
+        <div class="head">
+            <div class="band"></div>
+            <div class="eyes">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="body">
+            <div class="arms">
+                <div class="arm left"></div>
+                <div class="arm right"></div>
+            </div>
+            <div class="torso">
+                <div class="bottles">
+                    <div class="bottle"></div>
+                    <div class="bottle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="legs">
+            <div class="leg left"></div>
+            <div class="leg right"></div>
+        </div>
+        <div class="base"></div>
+    </div>
+</body>
+</html>
+
+.monolito {
+  width: 300px;
+  height: 600px;
+  background-color: #e6700f; 
+  position: relative;
+  margin: 50px auto;
+  border-radius: 20px; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+.monolito::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 20px;
+  background-color: #684f26;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Detalle en la parte inferior del monolito */
+.monolito::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 20px;
+  background-color: #7c5816;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Líneas verticales para dar textura al monolito */
+.monolito .linea-vertical {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 360px;
+  background-color: #e99115;
+  border-radius: 5px;
+}
+
+.monolito .linea-vertical:nth-child(odd) {
+  background-color: #d9b916;
+}
+
+/* Textura horizontal */
+.monolito .linea-horizontal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 10px;
+  background-color: #d87008;
+  border-radius: 5px;
+}
+
+.monolito .linea-horizontal:nth-child(odd) {
+  background-color: #a3700f;
+}
